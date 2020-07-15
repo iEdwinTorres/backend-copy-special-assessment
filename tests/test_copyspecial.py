@@ -110,7 +110,7 @@ class TestCopyspecial(unittest.TestCase):
         actual_path_list = self.module.get_special_paths('.')
         expected_path_list = [
             os.path.abspath(os.path.join(os.getcwd(), f))
-            for f in(os.listdir('.'))
+            for f in (os.listdir('.'))
             if SPL_REGEX.search(f)
             ]
         self.assertIsInstance(
